@@ -13,6 +13,13 @@ matrix:
     env: PUPPET_GEM_VERSION="~> 4"
   - rvm: 2.4.1
     env: PUPPET_GEM_VERSION="~> 5"
+  - rvm: 2.4.3
+    bundler_args: --without release
+    dist: trusty
+    env: BEAKER_set=centos-7-x86_64-docker
+    script: bundle exec rake beaker
+    services: docker
+    sudo: required
 notifications:
   email: false
 deploy:
