@@ -16,7 +16,7 @@ matrix:
   - rvm: 2.4.3
     bundler_args: --without release
     dist: trusty
-    env: BEAKER_set=centos-7-x86_64-docker
+    env: BEAKER_set=ubuntu-16.04
     script: bundle exec rake beaker
     services: docker
     sudo: required
